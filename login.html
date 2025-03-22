@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <img src="logo.jpg" alt="Quiz Logo" class="logo" />
+        <h1>Multi Language Center- Bogura</h1>
+      </div>
+    </nav>
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Student Login</h2>
+        <form id="login-form">
+          <input
+            type="text"
+            id="student-id"
+            placeholder="Student ID"
+            required
+          />
+          <input
+            type="password"
+            id="student-password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p id="login-error" style="color: red; display: none">
+          Invalid credentials!
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Developed by Rakibul Islam</p>
+    </footer>
+    <script src="login.js"></script>
+  </body>
+</html>
