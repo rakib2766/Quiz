@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "question": "We're live in which country?",
+      "question": "We live in which country?",
       "image": "bd.jpg",
       "answers": ["Korea", "India", "Bangladesh", "Nepal"],
       "correct": 2
