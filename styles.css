@@ -1,0 +1,515 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 460px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: -webkit-linear-gradient(#fff, #e6e6e6);
+  background: linear-gradient(#fff, #e6e6e6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px 0;
+}
+
+.footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.quiz-container {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 800px;
+  max-width: 95%;
+  margin: 3rem auto;
+}
+
+#question {
+  font-size: 32px;
+  margin-bottom: 40px;
+  padding: 0 30px;
+  line-height: 1.4;
+}
+
+#question-counter {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#timer {
+  font-size: 20px;
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#answers button {
+  display: block;
+  margin: 15px auto;
+  padding: 20px;
+  width: 85%;
+  border: none;
+  border-radius: 4px;
+  background-color: #4b6e93;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+#answers button.selected {
+  background-color: #17a2b8;
+  transform: scale(1.02);
+}
+#next-btn {
+  margin-top: 30px;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#next-btn:hover {
+  background-color: #218838;
+}
+
+#score-container {
+  margin-top: 40px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+#start-section {
+  text-align: center;
+  padding: 20px;
+}
+
+#start-btn {
+  padding: 20px 50px;
+  font-size: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+#start-btn:hover {
+  background-color: #218838;
+}
+
+.logout-btn,
+.quiz-btn,
+.result-btn {
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.logout-btn {
+  background: linear-gradient(to right, #1e3c72, #812897ba);
+}
+
+.quiz-btn {
+  background-color: #28a745;
+}
+
+.result-btn {
+  background-color: #17a2b8;
+}
+
+.logout-btn:hover,
+.quiz-btn:hover,
+.result-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Unified Responsive Design */
+@media screen and (min-width: 1201px) {
+  .nav-content {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-content {
+    max-width: 95%;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 350px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 300px;
+    height: 80px;
+  }
+
+  .navbar h1 {
+    font-size: 2rem;
+  }
+
+  .quiz-container {
+    width: 700px;
+    padding: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 200px;
+    height: 60px;
+  }
+
+  .navbar h1 {
+    font-size: 1.6rem;
+  }
+
+  .quiz-container {
+    width: 90%;
+    padding: 25px;
+    margin: 1.5rem auto;
+  }
+
+  #question {
+    font-size: 22px;
+    padding: 0 15px;
+  }
+
+  #answers button {
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .logout-btn,
+  .quiz-btn,
+  .result-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .logout-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+
+  .navbar h1 {
+    font-size: 1.3rem;
+  }
+
+  .quiz-container {
+    padding: 15px;
+    margin: 1rem auto;
+  }
+
+  #question {
+    font-size: 18px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  #answers button {
+    width: 95%;
+    padding: 12px;
+    font-size: 14px;
+    margin: 6px auto;
+  }
+
+  #question-counter,
+  #timer {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo {
+    width: 120px;
+    height: 40px;
+  }
+
+  .navbar h1 {
+    font-size: 1.1rem;
+  }
+
+  #answers button {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .quiz-container {
+    margin: 0.5rem auto;
+    padding: 15px;
+  }
+
+  .nav-content {
+    flex-direction: row;
+  }
+
+  #answers button {
+    margin: 4px auto;
+    padding: 8px;
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.question-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 480px) {
+  .question-image {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+}
+
+.user-info {
+  margin: 20px 0;
+}
+
+.user-info input {
+  padding: 10px 15px;
+  margin: 10px;
+  border: 2px solid #4b6e93;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.user-info input:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+.user-details {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #4b6e93;
+}
+
+.quiz-datetime {
+  color: #666;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 180px);
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 30px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #4b6e93;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-box button:hover {
+  background: #218838;
+}
+
+.user-welcome {
+  color: white;
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin: 0 15px;
+  line-height: 1.4;
+  min-width: 200px;
+}
+
+.student-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.student-batch {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .user-welcome {
+    padding: 10px 20px;
+    margin: 10px 0;
+    min-width: 180px;
+  }
+  .student-name {
+    font-size: 1.2rem;
+  }
+  .student-batch {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-welcome {
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+  .student-name {
+    font-size: 1rem;
+  }
+  .student-batch {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-welcome {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+}

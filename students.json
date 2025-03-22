@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": "STD001",
+      "password": "pass123",
+      "name": "MD Rakibul Islam",
+      "batch": "Batch-2023"
+    },
+    {
+      "id": "STD002",
+      "password": "pass456",
+      "name": "Jane Smith",
+      "batch": "Batch-2023"
+    },
+    {
+      "id": "STD003",
+      "password": "pass789",
+      "name": "Mike Johnson",
+      "batch": "Batch-2024"
+    }
+  ]
+}

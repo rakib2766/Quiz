@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <img src="logo.jpg" alt="Quiz Logo" class="logo" />
+        <h1>Multi Language Center- Bogura</h1>
+
+        <div class="user-welcome">
+          <div class="student-name"><span id="nav-student-name"></span></div>
+          <div class="student-batch"><span id="nav-student-batch"></span></div>
+        </div>
+        <a href="login.html" class="logout-btn">Logout</a>
+      </div>
+    </nav>
+    <div class="quiz-container">
+      <div id="start-section">
+        <h1>Quiz</h1>
+        <p>
+          You will have 30 seconds to complete
+          <span id="total-questions">0</span> questions.
+        </p>
+        <button id="start-btn">Start Quiz</button>
+      </div>
+      <div id="quiz-content" style="display: none">
+        <h1>Quiz</h1>
+        <div id="question-container">
+          <div id="question-counter">
+            Question <span id="current-number">1</span> of
+            <span id="total">0</span>
+          </div>
+          <div id="timer">Time left: <span id="time">30</span>s</div>
+          <p id="question"></p>
+          <div id="answers"></div>
+        </div>
+        <button id="next-btn">Next</button>
+        <div id="score-container" style="display: none">
+          <div class="user-details">
+            <p class="user-name-display">
+              Name: <span id="display-name"></span>
+            </p>
+            <p class="user-batch-display">
+              Batch: <span id="display-batch"></span>
+            </p>
+            <p class="quiz-datetime">
+              Date: <span id="display-datetime"></span>
+            </p>
+          </div>
+          <p>
+            Your Score: <span id="score">0</span>/<span id="total-score"
+              >0</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Developed by Rakibul Islam</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
