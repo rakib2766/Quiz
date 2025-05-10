@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": "STD001",
+      "password": "pass123",
+      "name": "MD Rakibul Islam",
+      "batch": "Batch-2023"
+    },
+    {
+      "id": "STD002",
+      "password": "pass456",
+      "name": "Nafis Iqbal",
+      "batch": "Batch-2025"
+    },
+    {
+      "id": "STD003",
+      "password": "pass789",
+      "name": "Shobuj Ahmed",
+      "batch": "Batch-2022"
+    }
+  ]
+}
